@@ -1,4 +1,5 @@
 import Button from '../button/Button';
+import './Home.css';
 
 function Home() {
     function newGardenClick(){

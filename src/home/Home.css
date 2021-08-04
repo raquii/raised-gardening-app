@@ -1,0 +1,15 @@
+#intro-div{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #intro-header{
+    font-size: 38pt;
+    margin: 0;
+  }
+  
+  #intro-content{
+   font-size: 12pt;
+  }
