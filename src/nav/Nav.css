@@ -1,9 +1,11 @@
 #nav-bar{
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-content: center;
     background-color: #f2e8cf91;
     height: 45px;
+    z-index: 10;
 }
 
 #nav-head{
