@@ -15,7 +15,7 @@ function Home() {
       <h1 id="intro-header">&#123; R A I S E D &#125;</h1>
       <p id="intro-content">a raised-bed garden planning app</p>
       <div id="button-container">
-        <Button text="Create A New Garden" clickHandler={newGardenClick} />
+        <Button text="Create a New Garden" clickHandler={newGardenClick} />
         <Button text="Explore Existing Gardens" clickHandler={existingGardenClick} />
       </div>
     </div>

@@ -6,13 +6,15 @@
   }
   
   #intro-header{
-    font-size: 38pt;
+    font-size: 48pt;
     margin: 0;
   }
   
   #intro-content{
-   font-size: 12pt;
+   font-size: 14pt;
   }
+
   #button-container{
+    margin-top: 10pt;
     display: flex;
   }
