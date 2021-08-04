@@ -13,3 +13,6 @@
   #intro-content{
    font-size: 12pt;
   }
+  #button-container{
+    display: flex;
+  }
