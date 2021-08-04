@@ -1,9 +1,15 @@
-.App-header {
-  background-color: #282c34;
-  width: 100%;
-  display: inline-flex;
-  flex-flow: row;
+#intro-div{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   justify-content: center;
-  color: white;
 }
 
+#intro-header{
+  font-size: 38pt;
+  margin: 0;
+}
+
+#intro-content{
+ font-size: 12pt;
+}
