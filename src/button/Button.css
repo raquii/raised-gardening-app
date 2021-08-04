@@ -7,13 +7,14 @@
     align-self: center;
     line-height: 1;
     margin: 10px;
-    padding: 1em;
+    padding: .9em;
     text-align: center;
     color: #386641;
     background-image: linear-gradient(45deg, #a7c957 50%, transparent 50%);
     background-position: 100%;
     background-size: 400%;
     transition: all 0.2s ease-in-out;
+    min-width: 100px;
 }
 
 .button:hover {
