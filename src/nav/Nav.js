@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import Button from '../button/Button'
 import './Nav.css';
 
 function Nav() {
