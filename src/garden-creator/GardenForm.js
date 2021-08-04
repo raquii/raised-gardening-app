@@ -8,20 +8,39 @@ function GardenForm({ goBack }) {
         name: "",
         length: 0,
         width: 0,
-        depth: 0,
-        zone: ""
+        depth: 0
     })
 
     function handleSubmit(e) {
         e.preventDefault()
         const newGarden = {
             name: formData.name,
-            length: formData.length,
-            width: formData.width,
-            depth: formData.depth,
-            zone: formData.zone
+            length: parseInt(formData.length),
+            width: parseInt(formData.width),
+            depth: parseInt(formData.depth)
         }
-        console.log(newGarden)
+        
+        if(validateForm()){
+            console.log(newGarden)
+        }
+    }
+
+    function validateForm(){
+        if (formData.name.trim() === ''){
+            console.log('you need to enter a name')
+            return false
+        }else if(formData.length === 0 ||formData.length>15){
+            console.log('please enter a valid length')
+            return false
+        }else if(formData.width === 0 ||formData.width>15){
+            console.log('please enter a valid width')
+            return false
+        }else if(formData.depth === 0 ||formData.depth>20){
+            console.log('please enter a valid depth')
+            return false
+        }else{
+            return true
+        }
     }
 
     function handleChange(e) {
