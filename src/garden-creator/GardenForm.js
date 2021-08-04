@@ -11,6 +11,12 @@ function GardenForm({ goBack }) {
         depth: 0
     })
 
+    function handleChange(e) {
+        const key = e.target.id;
+        const value = e.target.value
+        setFormData({ ...formData, [key]: value })
+    }
+
     function handleSubmit(e) {
         e.preventDefault()
         const newGarden = {
@@ -19,9 +25,9 @@ function GardenForm({ goBack }) {
             width: parseInt(formData.width),
             depth: parseInt(formData.depth)
         }
-        
+
         if(validateForm()){
-            console.log(newGarden)
+            saveGarden(newGarden)
         }
     }
 
@@ -35,7 +41,7 @@ function GardenForm({ goBack }) {
         }else if(formData.width === 0 ||formData.width>15){
             console.log('please enter a valid width')
             return false
-        }else if(formData.depth === 0 ||formData.depth>20){
+        }else if(formData.depth === 0 ||formData.depth>30){
             console.log('please enter a valid depth')
             return false
         }else{
@@ -43,10 +49,18 @@ function GardenForm({ goBack }) {
         }
     }
 
-    function handleChange(e) {
-        const key = e.target.id;
-        const value = e.target.value
-        setFormData({ ...formData, [key]: value })
+    function saveGarden(newGarden){
+        console.log(newGarden)
+        
+        fetch("http://localhost:9393/gardens", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newGarden)
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
     }
 
     return (
