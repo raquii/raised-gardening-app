@@ -14,7 +14,9 @@
    font-size: 14pt;
   }
 
-  #button-container{
+  .button-container{
     margin-top: 10pt;
+    width: 100%;
     display: flex;
+    justify-content: space-evenly;
   }
