@@ -1,0 +1,22 @@
+:root {
+    --background-color: #cdd993;
+    --alternate-background-color: #f2e8cf;
+    --text-color: #386641;
+    --text-color-light: #fffffa;
+    --link-color: #bc4749;
+    --div-bg-color: #f2e8cf91;
+}
+.App{
+    background-color: var(--background-color);
+    height: 100vh;
+    color: var(--text-color);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: inherit;
+}
+
