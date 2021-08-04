@@ -34,7 +34,7 @@ function GardenForm({ goBack }) {
         <form id="new-garden-form" onSubmit={handleSubmit}>
             <h2 id="garden-form-header">Create a New Garden</h2>
             <div id="input-container">
-                <label for="name">
+                <label htmlFor="name">
                     Name:
                 </label>
                 <input
@@ -45,7 +45,7 @@ function GardenForm({ goBack }) {
                     onChange={handleChange}
                 />
 
-                <label for="length">
+                <label htmlFor="length">
                     Length (ft):
                 </label>
                 <input
@@ -55,7 +55,7 @@ function GardenForm({ goBack }) {
                     value={formData.length}
                     onChange={handleChange}
                 />
-                <label for="width">
+                <label htmlFor="width">
                     Width (ft):
                 </label>
                 <input
@@ -66,7 +66,7 @@ function GardenForm({ goBack }) {
                     onChange={handleChange}
                 />
 
-                <label for="depth">
+                <label htmlFor="depth">
                     Depth (in):
                 </label>
                 <input
@@ -78,8 +78,15 @@ function GardenForm({ goBack }) {
                 />
             </div>
             <div className="button-container">
-                <Button text="Back" clickHandler={goBack} />
-                <Button text="Save Garden" clickHandler={handleSubmit} type="submit" />
+                <Button 
+                    text="Back" 
+                    clickHandler={goBack} 
+                />
+                <Button 
+                    text="Save Garden" 
+                    clickHandler={handleSubmit} 
+                    type="submit" 
+                />
             </div>
         </form>
     )
