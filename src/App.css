@@ -1,0 +1,9 @@
+.App-header {
+  background-color: #282c34;
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: center;
+  color: white;
+}
+
