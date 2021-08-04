@@ -1,14 +1,29 @@
 import { NavLink } from 'react-router-dom';
+import Button from '../button/Button'
 import './Nav.css';
 
 function Nav() {
     return (
-        <nav>
-            <NavLink exact to="/">Home</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/how-to">How To</NavLink>
-            <NavLink to="/existing-gardens">Explore Gardens</NavLink>
-            <NavLink to="/plant-encyclopedia">Plant-pedia</NavLink>
+        <nav id="nav-bar">
+            <h3 id="nav-head">&#123; R &#125;</h3>
+            <ul id="link-list">
+                <li className="link-li">
+                    <NavLink exact to="/">Home</NavLink>
+                </li>
+                <li className="link-li">
+                    <NavLink to="/about">About</NavLink>
+                </li>
+                <li className="link-li">
+                    <NavLink to="/how-to">How To</NavLink>
+                </li>
+                <li className="link-li">
+                    <NavLink to="/existing-gardens">Explore Gardens</NavLink>
+                </li>
+                <li className="link-li">
+                    <NavLink to="/plant-encyclopedia">Plant-pedia</NavLink>
+                </li>
+            </ul>
+
         </nav>
     )
 }
