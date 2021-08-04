@@ -1,0 +1,59 @@
+#new-garden-form{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    background-color: var(--alternate-background-color);
+    padding: 8px;
+    width: 40%;
+    border-radius: 4px;
+}
+
+#garden-form-header{
+    width: 100%;
+    text-align: center;
+    align-self: center;
+}
+
+#input-container{
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background: var(--background-color);
+    border-radius: 4px;
+}
+
+#input-container > label{
+    flex: 1 0 30%;
+    margin: 5px;
+}
+
+#input-container > input{
+    margin: 5px;
+    flex: 2 1 60%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4pt;
+    text-align: center;
+    border: none
+}
+
+#input-container > input:focus {
+    outline: 3px solid transparent;
+    background:#fafbfa;
+    color:var(--link-color);
+}
+
+.info-btn {
+    background-color: #bc4749;
+    border: none;
+    border-radius: 20%;
+    display: inline-flex;
+    color: white;
+    width: 20px;
+    align-items: center;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    justify-content: center;
+    margin: 0 2px;
+}
