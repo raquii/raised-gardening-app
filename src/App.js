@@ -4,6 +4,7 @@ import './App.css';
 import Nav from './nav/Nav';
 import Home from './home/Home';
 import Plantpedia from './plantpedia/Plantpedia';
+import PlantDetail from './plantpedia/PlantDetail';
 
 
 function App() {
@@ -32,8 +33,11 @@ function App() {
           <Route path="/existing-gardens">
             <h1>This is all existing gardens</h1>
           </Route>
-          <Route path="/plant-encyclopedia">
+          <Route exact path="/plant-encyclopedia">
             <Plantpedia plants={plants}/>
+          </Route>
+          <Route path="/plant-encyclopedia/:id">
+            <PlantDetail />
           </Route>
         </Switch>
       </main>
