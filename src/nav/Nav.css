@@ -1,11 +1,11 @@
 #nav-bar{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-content: center;
     background-color: #f2e8cf91;
-    height: 45px;
     z-index: 10;
+    padding: 0;
 }
 
 #nav-head{
@@ -16,23 +16,26 @@
 #link-list{
     list-style-type: none;
     display: flex;
+    justify-content: flex-end;
+    min-width: 60%;
+    margin: 0;
 }
 
 .link-li{
-    align-items: center;
-    display: flex;
+    
 }
 
 .link-li > a{
     display: block;
-    padding: 18px 8px;
+    padding: 21px 8px;
     color: var(--link-color);
     text-decoration: none;
 }
 
 .link-li > a.active {
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: #a7c95785;
+    
 }
 
 .link-li > a.active:before {
