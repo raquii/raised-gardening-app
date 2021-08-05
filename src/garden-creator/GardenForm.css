@@ -1,11 +1,12 @@
 #new-garden-form{
+    position: absolute;
     display: flex;
     flex-flow: row wrap;
     align-items: baseline;
     justify-content: space-between;
     background-color: var(--alternate-background-color);
     padding: 8px;
-    width: 40%;
+    width: 60%;
     border-radius: 4px;
 }
 
