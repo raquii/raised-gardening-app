@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Button from '../button/Button';
-import GardenForm from '../garden-creator/GardenForm';
+import GardenForm from '../gardens/GardenForm';
 import './Home.css';
 
 function Home() {
