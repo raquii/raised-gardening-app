@@ -69,3 +69,43 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
+
+.plot{
+    box-sizing: border-box; 
+    border-top: 1px solid black; 
+    border-right: 1px solid black;
+    width: 40px; 
+    height: 40px;
+    background-color: #7a522c;
+}
+
+.plot-form{
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    background-color: var(--alternate-background-color);
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.plot-current{
+    flex-basis: 100%;
+    font-size: 12pt;
+    text-align: center;
+}
+
+.plot-btn {
+    background-color: var(--link-color);
+    border: none;
+    border-radius: 1pt;
+    color: white;
+    cursor: pointer;
+    margin-right: 2pt;
+    padding-top: 2px;
+}
+  
+.plot-btn:hover {
+    background-color: var(--alternate-background-color);
+    color: var(--link-color);
+}

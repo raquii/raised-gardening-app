@@ -6,7 +6,7 @@ import Home from './home/Home';
 import Plantpedia from './plantpedia/Plantpedia';
 import PlantDetail from './plantpedia/PlantDetail';
 import ExploreGardens from './gardens/ExploreGardens';
-
+import GardenEditor from './gardens/GardenEditor';
 
 function App() {
   const [plants, setPlants] = useState([]);
@@ -31,8 +31,11 @@ function App() {
           <Route path="/how-to">
             <h1>This is directions on how to use Raised</h1>
           </Route>
-          <Route path="/existing-gardens">
+          <Route exact path="/existing-gardens">
             <ExploreGardens />
+          </Route>
+          <Route path="/garden-editor/:id">
+            <GardenEditor plants={plants}/>
           </Route>
           <Route exact path="/plant-encyclopedia">
             <Plantpedia plants={plants}/>

@@ -17,7 +17,7 @@ function ExploreGardens() {
             id={garden.id}
             name={garden.name}
             description={`${garden.length}'x${garden.width}'x${garden.depth}"`}
-            link={`existing-gardens`} />
+            link={`garden-editor`} />
     })
 
     if (gardens.length < 1) return <h2>Sowing seeds...</h2>

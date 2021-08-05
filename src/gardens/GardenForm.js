@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory } from 'react-router-dom';
 import Button from "../button/Button";
 import './GardenForm.css'
 // https://planthardiness.ars.usda.gov/
@@ -9,7 +10,9 @@ function GardenForm({ goBack }) {
         length: 0,
         width: 0,
         depth: 0
-    })
+    });
+
+    const history = useHistory();
 
     function handleChange(e) {
         const key = e.target.id;
@@ -18,7 +21,7 @@ function GardenForm({ goBack }) {
     }
 
     function handleSubmit(e) {
-        e.preventDefault()
+        e.preventDefault();
         const newGarden = {
             name: formData.name,
             length: parseInt(formData.length),
@@ -27,7 +30,7 @@ function GardenForm({ goBack }) {
         }
 
         if (validateForm()) {
-            saveGarden(newGarden)
+            saveGarden(newGarden);
         }
     }
 
@@ -50,8 +53,6 @@ function GardenForm({ goBack }) {
     }
 
     function saveGarden(newGarden) {
-        console.log(newGarden)
-
         fetch("http://localhost:9393/gardens", {
             method: "POST",
             headers: {
@@ -60,7 +61,7 @@ function GardenForm({ goBack }) {
             body: JSON.stringify(newGarden)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => history.push(`/garden-editor/${data.garden.id}`))
     }
 
     return (
