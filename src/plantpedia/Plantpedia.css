@@ -13,6 +13,10 @@
     justify-content: center;
 }
 
+#plantpedia-search>input{
+    margin-left: 5px;
+}
+
 #card-container{
     display: flex;
     width: 100vw;
@@ -31,11 +35,19 @@
     color:#6a994e
 }
 
+.plant-card>a{
+    text-decoration: none;
+    color: #6a994e;
+    text-align: center;
+    margin: 0;
+}
+
 .plant-header{
     text-align: center;
     font-variant: all-petite-caps;
-    letter-spacing: 2pt;
+    letter-spacing: 3pt;
     color: #386641;
+    margin-bottom: 4px;
 }
 
 .plant-stats td{
