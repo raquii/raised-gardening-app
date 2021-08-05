@@ -62,3 +62,10 @@
     justify-content: center;
     margin: 0 2px;
 }
+
+#gardens-div{
+    display: flex;
+    width: 100vw;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
