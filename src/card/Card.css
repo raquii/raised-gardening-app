@@ -1,0 +1,26 @@
+.card{
+    display: flex;
+    flex-flow: column;
+    background-color: #f2e8cf9d;
+    width: 30%;
+    margin: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    color:#6a994e
+}
+
+.card>a{
+    text-decoration: none;
+    color: #6a994e;
+    text-align: center;
+    margin: 0;
+}
+
+.header{
+    text-align: center;
+    font-variant: all-petite-caps;
+    letter-spacing: 3pt;
+    color: #386641;
+    margin-bottom: 4px;
+    margin-top: 0;
+}
