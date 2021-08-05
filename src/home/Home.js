@@ -12,10 +12,6 @@ function Home() {
     setShowForm(!showForm)
   }
 
-  function existingGardenClick() {
-    console.log('existing gardens here')
-  }
-
   function buttonDiv() {
     return (
       <div className="button-container">
