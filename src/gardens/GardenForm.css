@@ -70,13 +70,52 @@
     justify-content: space-evenly;
 }
 
+#garden-editor{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#garden-editor h1{
+    font-variant: all-petite-caps;
+    background-color: var(--alternate-background-color);
+    text-align: center;
+    border-radius: 4px;
+    letter-spacing: 3px;
+    padding: 0 8px 6px;
+}
+
+#garden-editor h2{
+    font-variant: all-petite-caps;
+    border: 2pt solid var(--text-color);
+    text-align: center;
+    border-radius: 4px;
+    letter-spacing: 3px;
+    padding: 0 8px 6px;
+    margin-bottom: 0;
+}
+
+#garden-plot-container{
+
+}
+
 .plot{
-    box-sizing: border-box; 
-    border-top: 1px solid black; 
-    border-right: 1px solid black;
-    width: 40px; 
-    height: 40px;
+    box-sizing: border-box;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #49290c; 
+    width: 70px; 
+    height: 70px;
     background-color: #7a522c;
+}
+
+.plot-label{
+    color: var(--text-color-light);
+    font-size: 70%;
+    text-align: center;
+    font-variant: all-petite-caps;
 }
 
 .plot-form{
