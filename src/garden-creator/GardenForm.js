@@ -26,32 +26,32 @@ function GardenForm({ goBack }) {
             depth: parseInt(formData.depth)
         }
 
-        if(validateForm()){
+        if (validateForm()) {
             saveGarden(newGarden)
         }
     }
 
-    function validateForm(){
-        if (formData.name.trim() === ''){
-            console.log('you need to enter a name')
+    function validateForm() {
+        if (formData.name.trim() === '') {
+            alert(`Give your garden a name!`)
             return false
-        }else if(formData.length === 0 ||formData.length>15){
-            console.log('please enter a valid length')
+        } else if (formData.length === 0 || formData.length > 15) {
+            alert(`please enter a valid LENGTH (between 1-15 ft)`)
             return false
-        }else if(formData.width === 0 ||formData.width>15){
-            console.log('please enter a valid width')
+        } else if (formData.width === 0 || formData.width > 15) {
+            alert('please enter a valid WIDTH (between 1-15 ft)')
             return false
-        }else if(formData.depth === 0 ||formData.depth>30){
-            console.log('please enter a valid depth')
+        } else if (formData.depth < 5 || formData.depth > 30) {
+            console.log('please enter a valid DEPTH (between 5-30 in)')
             return false
-        }else{
+        } else {
             return true
         }
     }
 
-    function saveGarden(newGarden){
+    function saveGarden(newGarden) {
         console.log(newGarden)
-        
+
         fetch("http://localhost:9393/gardens", {
             method: "POST",
             headers: {
@@ -59,8 +59,8 @@ function GardenForm({ goBack }) {
             },
             body: JSON.stringify(newGarden)
         })
-        .then(res => res.json())
-        .then(data => console.log(data))
+            .then(res => res.json())
+            .then(data => console.log(data))
     }
 
     return (
@@ -111,14 +111,14 @@ function GardenForm({ goBack }) {
                 />
             </div>
             <div className="button-container">
-                <Button 
-                    text="Back" 
-                    clickHandler={goBack} 
+                <Button
+                    text="Back"
+                    clickHandler={goBack}
                 />
-                <Button 
-                    text="Save Garden" 
-                    clickHandler={handleSubmit} 
-                    type="submit" 
+                <Button
+                    text="Save Garden"
+                    clickHandler={handleSubmit}
+                    type="submit"
                 />
             </div>
         </form>
