@@ -5,9 +5,10 @@ import PlantCard from './PlantCard';
 function Plantpedia({ plants }) {
     const [search, setSearch] = useState("");
 
-    const plantCards = plants.filter(plant=>plant.name.toUpperCase().includes(search.toUpperCase())).map(plant => {
+    const plantCards = plants.filter(plant => plant.name.toUpperCase().includes(search.toUpperCase())).map(plant => {
         return <PlantCard
             key={plant.name}
+            id={plant.id}
             name={plant.name}
             category={plant.category}
             perSqFt={plant.per_sq_ft}
@@ -19,7 +20,7 @@ function Plantpedia({ plants }) {
         />
     });
 
-    function handleSearchChange(e){
+    function handleSearchChange(e) {
         setSearch(e.target.value)
     }
 
@@ -27,7 +28,7 @@ function Plantpedia({ plants }) {
         <div id="plantpedia">
             <div id="plantpedia-search">
                 <label>Search: </label>
-                <input type="text" value={search} onChange={handleSearchChange}/>
+                <input type="text" value={search} onChange={handleSearchChange} />
             </div>
             <div id="card-container">
                 {plantCards}
