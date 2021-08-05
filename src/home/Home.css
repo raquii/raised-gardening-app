@@ -3,6 +3,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    margin-top: 25vh;
   }
   
   #intro-header{
