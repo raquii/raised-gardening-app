@@ -18,6 +18,8 @@ function Plantpedia({ plants }) {
         setSearch(e.target.value)
     }
 
+    if (plants.length < 1) return <h2>Sowing seeds...</h2>
+
     return (
         <div id="plantpedia">
             <div id="plantpedia-search">
