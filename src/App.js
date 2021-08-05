@@ -5,6 +5,7 @@ import Nav from './nav/Nav';
 import Home from './home/Home';
 import Plantpedia from './plantpedia/Plantpedia';
 import PlantDetail from './plantpedia/PlantDetail';
+import ExploreGardens from './gardens/ExploreGardens';
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
             <h1>This is directions on how to use Raised</h1>
           </Route>
           <Route path="/existing-gardens">
-            <h1>This is all existing gardens</h1>
+            <ExploreGardens />
           </Route>
           <Route exact path="/plant-encyclopedia">
             <Plantpedia plants={plants}/>
