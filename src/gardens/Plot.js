@@ -1,36 +1,54 @@
 import { useState } from "react";
 
-function Plot({ plants, plant_id, garden_id }) {
+function Plot({ plants, garden_id, position, plant_name }) {
     const [showPlotForm, setShowPlotForm] = useState(false);
-    const [plant, setPlant] = useState({
-        garden_id: parseInt(garden_id),
-        plant_id: null
-    });
-
-    if (plant_id) {
-        setPlant({ ...plant, plant_id: plants[plant_id] })
-    }
+    const [select, setSelect] = useState();
+    const [name, setName] = useState('');
 
     function handlePlotClick(e) {
-        if (e.currentTarget === e.target) {
-            setShowPlotForm(!showPlotForm)
-        }
+        setShowPlotForm(!showPlotForm)
     }
 
     function handleFormChange(e) {
-        setPlant(p => ({ ...plant, plant_id: parseInt(e.target.value)}))
+        setSelect(e.target.value)
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
         setShowPlotForm(!showPlotForm)
+        savePlant(parseInt(select))
+    }
+
+    function savePlant(plantId) {
+        const updatedPlot = {
+            garden_id: garden_id,
+            plant_id: plantId,
+            position: position
+        }
+
+        fetch(`http://localhost:9393/gardens/${garden_id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updatedPlot)
+        })
+            .then(res => res.json())
+            .then(data => setName(data['plot']['plant_name']))
     }
 
     const plotForm = () => {
         return (
             <div className='plot-form'>
-                <p className='plot-current'>Current: {plant.plant_id ? plants[plant.plant_id - 1]['name'] : 'none'}</p>
-                <form>
+                <p className='plot-current'>Current: {plant_name ? plant_name : 'none'}</p>
+                <form onSubmit={handleSubmit}>
                     <button className='plot-btn' onClick={() => setShowPlotForm(!showPlotForm)}>
                         <i className="fa fa-close" />
                     </button>
-                    <select value={plant} onChange={handleFormChange}>
+                    <button className='plot-btn' type={'submit'}>
+                        <i className="fa fa-check" />
+                    </button>
+                    <select value={select} onChange={handleFormChange}>
                         <option value='null'>Select</option>
                         {plants.map(plant => <option key={plant.name} value={plant.id}>{plant.name}</option>)}
                     </select>
@@ -39,12 +57,15 @@ function Plot({ plants, plant_id, garden_id }) {
         )
     }
 
+
     return (
-        <div className='plot' onClick={handlePlotClick}>
-            <img className='plot-image' src={plant.icon} alt={plant.name} />
-            {/* <span style={{display: 'hidden'}}>{plant}</span> */}
+        <>
+            <div className='plot' onClick={handlePlotClick}>
+                {/* <img className='plot-image' src={plant.icon} alt={plant.name} /> */}
+                <p className='plot-label'>{name.length > 0 ? name : plant_name ? plant_name : 'none'}</p>
+            </div>
             {showPlotForm && plotForm()}
-        </div>
+        </>
     )
 }
 
