@@ -13,9 +13,6 @@ function Nav() {
                     <NavLink to="/about">About</NavLink>
                 </li>
                 <li className="link-li">
-                    <NavLink to="/how-to">How To</NavLink>
-                </li>
-                <li className="link-li">
                     <NavLink to="/existing-gardens">Explore Gardens</NavLink>
                 </li>
                 <li className="link-li">

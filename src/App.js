@@ -28,9 +28,6 @@ function App() {
           <Route path="/about">
             <h1>This is an about page</h1>
           </Route>
-          <Route path="/how-to">
-            <h1>This is directions on how to use Raised</h1>
-          </Route>
           <Route exact path="/existing-gardens">
             <ExploreGardens />
           </Route>
