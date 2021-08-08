@@ -5,7 +5,7 @@ function ExploreGardens() {
     const [gardens, setGardens] = useState([]);
     useEffect(() => {
 
-        fetch('http://frozen-sea-47540.herokuapp.com/gardens')
+        fetch('https://frozen-sea-47540.herokuapp.com/gardens')
             .then(r => r.json())
             .then(data => setGardens(data.gardens))
 

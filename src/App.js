@@ -13,7 +13,7 @@ function App() {
   const [plants, setPlants] = useState([]);
  
   useEffect(() => {
-    fetch('http://frozen-sea-47540.herokuapp.com/plants')
+    fetch('https://frozen-sea-47540.herokuapp.com/plants')
     .then(r=>r.json())
     .then(data=>setPlants(data.plants))
   }, [])

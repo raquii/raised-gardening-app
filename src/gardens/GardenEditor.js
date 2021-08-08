@@ -10,7 +10,7 @@ function GardenEditor({ plants }) {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://frozen-sea-47540.herokuapp.com/gardens/${id}`)
+        fetch(`https://frozen-sea-47540.herokuapp.com/gardens/${id}`)
             .then(r => r.json())
             .then(data => {
                 setGarden(data.gardens[0])

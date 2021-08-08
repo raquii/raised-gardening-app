@@ -8,7 +8,7 @@ function PlantDetail() {
     const { id } = useParams()
 
     useEffect(() => {
-        fetch(`http://frozen-sea-47540.herokuapp.com/plants/${id}`)
+        fetch(`https://frozen-sea-47540.herokuapp.com/plants/${id}`)
             .then(r => r.json())
             .then(data => setPlant(data.plant[0]))
     }, [id])
