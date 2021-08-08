@@ -41,48 +41,92 @@
     text-align: center;
     margin: 0;
 }
+.plant-header-container{
+    display: inline-flex;
+    align-self: center;
+    border: 2px solid var(--text-color);
+    border-radius: 3px;
+    margin: 12px 0;
+    padding: 0px 3px;
+    height: 45px;
+}
 
 .plant-header{
     text-align: center;
     font-variant: all-petite-caps;
-    letter-spacing: 3pt;
-    color: #386641;
-    margin-bottom: 4px;
+    letter-spacing: 4pt;
+    padding-left: 10px;
+    padding-right: 7px;
+    padding-bottom: 3px;
+    height: fit-content;
+    background-color: var(--text-color);
+    color: var(--alternate-background-color);
+    border: 2px solid var(--text-color);
+    border-radius: 3px;  
+    align-self: center; 
+}
+
+.plant-stats{
+    width: fit-content;
+    align-self: center;
 }
 
 .plant-stats td{
     font-size: 9pt;
-    border: 1px solid black;
+    border: 1px solid #cdd99367;
     text-align: center;
+    border-radius: 2px;
+    background-color: #cdd99367;
 }
+
 .plant-stats th{
     font-size: 9pt;
     font-variant: all-petite-caps;
-    border: 1px solid black;
-    text-align: left;
-}
-
-.plant-note-container{
-
+    border: 1px solid var(--background-color);
+    text-align: right;
+    border-radius: 2px;
+    background-color: var(--background-color);
 }
 
 .plant-subheader{
     text-align: center;
     font-variant: all-petite-caps;
     letter-spacing: 2pt;
-    color: #386641;
-    margin:2pt 0 0 0;
+    margin:14pt 0 5px 0;
+    padding-left: 10px;
+    padding-right: 7px;
+    padding-bottom: 2px;
+    width: fit-content;
+    color: var(--text-color);
+    align-self: center;
+    border: 2px solid var(--text-color);
+    border-radius: 3px;
+}
+
+.plant-note-container{
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 40px;
+}
+
+.plant-notes{
+    width: 80%;
+    align-self: center;
 }
 
 .plant-notes th{
-    font-size: 9pt;
+    font-size: 12pt;
     font-variant: all-petite-caps;
-    border: 1px solid black;
-    text-align: left;
+    border: 1px solid var(--background-color);
+    text-align: center;
+    border-radius: 2px;
+    background-color: var(--background-color);
 }
 
 .plant-notes td{
-    font-size: 9pt;
-    border: 1px solid black;
+    font-size: 10pt;
+    border: 1px solid #cdd99367;
+    border-radius: 2px;
     text-align: center;
+    background-color: #cdd99367;
 }
