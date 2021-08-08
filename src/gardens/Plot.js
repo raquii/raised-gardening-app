@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../button/Button";
 
 function Plot({ plants, garden_id, position, plant_name }) {
     const [showPlotForm, setShowPlotForm] = useState(false);
@@ -42,12 +43,16 @@ function Plot({ plants, garden_id, position, plant_name }) {
             <div className='plot-form'>
                 <p className='plot-current'>Current: {plant_name ? plant_name : 'none'}</p>
                 <form onSubmit={handleSubmit}>
-                    <button className='plot-btn' onClick={() => setShowPlotForm(!showPlotForm)}>
-                        <i className="fa fa-close" />
-                    </button>
-                    <button className='plot-btn' type={'submit'}>
-                        <i className="fa fa-check" />
-                    </button>
+                    <Button
+                        className='plot-btn'
+                        text={<i className="fa fa-close" />}
+                        clickHandler={() => setShowPlotForm(!showPlotForm)}
+                    />
+                    <Button
+                        className='plot-btn'
+                        text={<i className="fa fa-check" />}
+                        type={'submit'}
+                    />
                     <select value={select} onChange={handleFormChange}>
                         <option value='null'>Select</option>
                         {plants.map(plant => <option key={plant.name} value={plant.id}>{plant.name}</option>)}

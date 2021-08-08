@@ -1,10 +1,10 @@
 import './Button.css';
 
-function Button({ text = "click", clickHandler, type = "button" }) {
+function Button({ className = "button", text = "click", clickHandler, type = "button" }) {
 
     return (
         <button
-            className="button"
+            className={className}
             onClick={clickHandler}
             type={type}
         >
