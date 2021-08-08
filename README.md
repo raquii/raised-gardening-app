@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# &#123; R A I S E D &#125;
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+__{ R A I S E D }__ is a raised-bed garden planning web application.
 
-## Available Scripts
+![Demo Gif](./public/raised-gif.gif)
 
-In the project directory, you can run:
+*This is the front-end repo of this project The back-end source code can be found [here](https://github.com/raquii/raised-db)*
 
-### `npm start`
+## General Information
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I created this project for FlatIron School's Software Engineering Bootcamp. This project uses a React front-end, with a Ruby back-end using ActiveRecord, Rack, and SQLite for the database.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I built this app because it is something I wanted for myself, to be quite honest. I can't wait to use it to plan my own raised-beds.
 
-### `npm test`
+To see a demo of the application, [video walkthrough](https://youtu.be/3z6XsOGe6Mw).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Room for Improvment
 
-### `npm run build`
+🔲 Add herbs and fruits to database
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🔲 Allow user to access plant-pedia on garden planner page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🔲 User auth, private gardens
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Sources
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* I found the following website very helpful in my research for my Plant-pedia:
+  * [Gardener's Supply Company](https://www.gardeners.com/)
+  * [The Old Farmer's Almanac](https://www.almanac.com/)
+  * [Better Homes & Gardens: Garden Plans](https://www.bhg.com/gardening/plans/)
