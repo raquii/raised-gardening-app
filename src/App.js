@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Nav from './nav/Nav';
 import Home from './home/Home';
+import About from './about/About';
 import Plantpedia from './plantpedia/Plantpedia';
 import PlantDetail from './plantpedia/PlantDetail';
 import ExploreGardens from './gardens/ExploreGardens';
@@ -26,7 +27,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/about">
-            <h1>This is an about page</h1>
+            <About />
           </Route>
           <Route exact path="/existing-gardens">
             <ExploreGardens />
