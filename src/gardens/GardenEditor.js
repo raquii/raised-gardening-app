@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import Plot from "./Plot";
+import Button from '../button/Button'
 
 function GardenEditor({ plants }) {
     const [garden, setGarden] = useState(null);
-    const [plots, setPlots] = useState([])
-    const { id } = useParams()
+    const [plots, setPlots] = useState([]);
+    const [help, setHelp] = useState(false);
+    const { id } = useParams();
 
     useEffect(() => {
         fetch(`http://localhost:9393/gardens/${id}`)
@@ -79,11 +81,24 @@ function GardenEditor({ plants }) {
         ))
     }
 
+    function helpHandler() {
+        setHelp(!help)
+    }
+
     return (
         <div id='garden-editor'>
             <h1>&#123; Garden Editor &#125;</h1>
             <h2>{name}</h2>
             <p>{length} x {width} x {depth}</p>
+            <Button
+                className='help-btn'
+                text={<i className="fa fa-question" />}
+                clickHandler={helpHandler}
+            />
+               {help && 
+                <div className='help-div'>
+                    <p>Edit your garden by clicking on plots and setting the plants you wish to plant on them.</p>
+                </div>}         
             <div id='garden-plot-container'>
                 {grid()}
             </div>

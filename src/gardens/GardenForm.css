@@ -73,6 +73,7 @@
 /* garden editor styles */
 
 #garden-editor{
+    position: relative;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -109,8 +110,40 @@
     margin: 0;
 }
 
+.help-btn{
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    background-color: var(--link-color);
+    border: none;
+    border-radius: 3pt;
+    color: var(--alternate-background-color);
+    cursor: pointer;
+    margin-right: 2pt;
+    padding-top: 2px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.help-btn:hover {
+    background-color: var(--alternate-background-color);
+    color: var(--link-color);
+}
+
+
+.help-div{
+    position: fixed;
+    bottom: 10px;
+    right: 90px;
+    background-color: var(--alternate-background-color);
+    color: var(--text-color);
+    width: 70%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--text-color);
+    text-align: center;
+}
+
 #garden-plot-container{
- 
     border-radius: 4px;
     background-color: #cdd99383;
     width: 100%;
@@ -119,7 +152,6 @@
     align-items: center;
     padding: 18px 0px;
 }
-
 
 .plot{
     box-sizing: border-box;
@@ -144,11 +176,11 @@
 
 .plot-form{
     position: absolute;
-    bottom: 0%;
-    right: 40%;
+    bottom: 50%;
+    right: 20%;
     display: flex;
     flex-flow: column;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     background-color: #6a994e;
     padding: 10px 15px 25px;
     border-radius: 4px;
