@@ -18,7 +18,7 @@ function PlantDetail() {
     const { name, category, per_sq_ft, days_to_harvest, planting_dates, notes} = plant;
     
     return (
-        <div id={name} className="plant-card" style={{width: "60%"}}>
+        <div id={name} className="plant-card" >
             <div className="plant-header-container">
                 <h2 className="plant-header">{name}</h2>
             </div>
