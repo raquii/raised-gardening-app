@@ -64,3 +64,10 @@
     font-variant: normal;
     text-transform: uppercase;
 }
+
+@media only screen and (max-width: 500px) {
+
+    #about-header{
+        font-size: 7vw;
+    }
+}

@@ -208,3 +208,10 @@
     background-color: var(--alternate-background-color);
     color: var(--link-color);
 }
+
+@media only screen and (max-width: 500px) {
+
+    #garden-editor h1{
+        font-size: 6vw;
+    }
+}
