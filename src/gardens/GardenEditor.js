@@ -10,7 +10,7 @@ function GardenEditor({ plants }) {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:9393/gardens/${id}`)
+        fetch(`http://frozen-sea-47540.herokuapp.com/gardens/${id}`)
             .then(r => r.json())
             .then(data => {
                 setGarden(data.gardens[0])
@@ -97,7 +97,7 @@ function GardenEditor({ plants }) {
             />
                {help && 
                 <div className='help-div'>
-                    <p>Edit your garden by clicking on plots and setting the plants you wish to plant on them.</p>
+                    <p>Edit your garden by clicking on plots and setting the plants you wish to plant on them using the form.</p>
                 </div>}         
             <div id='garden-plot-container'>
                 {grid()}

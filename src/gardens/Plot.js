@@ -27,7 +27,7 @@ function Plot({ plants, garden_id, position, plant_name }) {
             position: position
         }
 
-        fetch(`http://localhost:9393/gardens/${garden_id}`, {
+        fetch(`http://frozen-sea-47540.herokuapp.com/gardens/${garden_id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

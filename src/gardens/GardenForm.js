@@ -53,7 +53,7 @@ function GardenForm({ goBack }) {
     }
 
     function saveGarden(newGarden) {
-        fetch("http://localhost:9393/gardens", {
+        fetch("http://frozen-sea-47540.herokuapp.com/gardens", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
